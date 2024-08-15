@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +9,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,38 +20,21 @@ h1 {
     margin-left: 30px;
 }
 
-.container {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-}
-
-.form-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fde3a7d7;
-    padding: 1rem;
-}
-
-.form-image img {
-    width: 21rem;
-}
-
 .form {
     width: 50%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3rem;
+    padding: 1.7rem;
+    margin-left: 34px;
+    margin-right: 34px;
 }
 
 .form-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -102,7 +86,6 @@ h1 {
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
-    
 }
 
 .input-box input::placeholder {
@@ -134,7 +117,7 @@ h1 {
 
 .continue-button button {
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     border: none;
     background-color: #8aacf1;
     padding: 0.62rem;
@@ -174,8 +157,7 @@ h1 {
         flex-direction: column;
         z-index: 5;
         padding-right: 2rem;
-        max-height: 10rem;
-        overflow-y: scroll;
+        max-height: 22rem;
         flex-wrap: nowrap;
     }
     .gender-inputs {
@@ -190,5 +172,65 @@ h1 {
     }
     .gender-input {
         margin-top: 0.5rem;
+    }
+
+    @keyframes button-grow-shrink {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .button-grow {
+        animation: button-grow-shrink 0.6s ease;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .form {
+        width: 85%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 1.7rem;
+    }
+
+    .form-header {
+        margin-top: 30px;
+        margin-bottom: 0.1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .continue-button button {
+        width: 100%;
+        margin-top: 0.2rem;
+        border: none;
+        background-color: #8aacf1;
+        padding: 0.40rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .input-box input {
+        margin: 0.3rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c;
+        font-size: 0.8rem;
+    }
+
+    .gender-inputs {
+        margin-top: 0rem;
+        margin-bottom: 10px;
     }
 }
