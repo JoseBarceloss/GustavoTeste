@@ -20,7 +20,7 @@ document.querySelector('.phone').addEventListener('input', function (e) {
 });
 
 document.getElementById('name').addEventListener('input', function (e) {
-    const maxLength = 10;
+    const maxLength = 20;
     if (e.target.value.length > maxLength) {
         e.target.value = e.target.value.slice(0, maxLength);
     }
