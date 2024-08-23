@@ -20,14 +20,14 @@ document.querySelector('.phone').addEventListener('input', function (e) {
 });
 
 document.getElementById('name').addEventListener('input', function (e) {
-    const maxLength = 20;
+    const maxLength = 40;
     if (e.target.value.length > maxLength) {
         e.target.value = e.target.value.slice(0, maxLength);
     }
 });
 
 document.getElementById('instagram').addEventListener('input', function (e) {
-    const maxLength = 15;
+    const maxLength = 35;
     if (e.target.value.length > maxLength) {
         e.target.value = e.target.value.slice(0, maxLength);
     }
